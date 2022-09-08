@@ -1,10 +1,6 @@
-FROM tomcat
+FROM tomcat:jdk8-openjdk
 
-MAINTAINER Tomasz Lisowski "lis109@wp.pl"
+COPY target/Hello_World-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/
 
-WORKDIR /usr/local/bin/
-
-COPY target/Hello_World-1.0-SNAPSHOT.war .
-
-CMD ["bin/bash"]
+CMD ["catalina.sh run"]
 
