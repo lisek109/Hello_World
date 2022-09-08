@@ -1,0 +1,1 @@
+You can start application from command line using: mvn tomcat7:run -e
